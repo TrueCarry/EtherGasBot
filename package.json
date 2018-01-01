@@ -1,0 +1,32 @@
+{
+  "name": "ethergas",
+  "version": "1.1.0",
+  "description": "Ether Gas Bot",
+  "main": "handler.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Tim <truecarry@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-source-map-support": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "serverless-webpack": "^4.2.0",
+    "webpack": "^3.6.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.175.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0",
+    "got": "^8.0.1",
+    "jest": "^21.2.1",
+    "source-map-support": "^0.4.18",
+    "telegraf": "^3.17.2",
+    "telegraf-aws": "^0.1.1"
+  }
+}

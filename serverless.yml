@@ -1,0 +1,38 @@
+# NOTE: update this with your service name
+service: ethergas
+
+# Use the serverless-webpack plugin to transpile ES6
+plugins:
+  - serverless-webpack
+
+# Enable auto-packing of external modules
+custom:
+  webpackIncludeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  region: us-east-1
+  environment:
+    DEBUG: '*'
+
+functions:
+  telegram:
+    handler: handler.telegram
+    events:
+      - http:
+          path: telegram
+          method: get
+      - http:
+          path: telegram
+          method: post
+  background:
+    handler: handler.background
+    events:
+      - schedule:
+          rate: rate(5 minutes)
+      - http:
+          path: background
+          method: get
+
